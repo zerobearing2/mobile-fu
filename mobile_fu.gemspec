@@ -16,7 +16,8 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
-    "CHANGELOG",
+    ".gitignore",
+     "CHANGELOG",
      "MIT-LICENSE",
      "README.rdoc",
      "Rakefile",
@@ -26,6 +27,7 @@ Gem::Specification.new do |s|
      "lib/mobile_fu.rb",
      "lib/mobile_fu_helper.rb",
      "lib/mobilized_styles.rb",
+     "mobile_fu.gemspec",
      "spec/mobilized_styles_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
