@@ -1,3 +1,8 @@
+dir = File.dirname(__FILE__)
+$LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
+require 'mobile_fu_helper.rb'
+require 'mobilized_styles'
+
 module ActionController
   module MobileFu
     # These are various strings that can be found in mobile devices.  Please feel free
@@ -100,3 +105,6 @@ module ActionController
 end
 
 ActionController::Base.send(:include, ActionController::MobileFu)
+ActionView::Base.send(:include, MobileFuHelper)
+ActionView::Base.send(:include, MobilizedStyles)
+ActionView::Base.send(:alias_method_chain, :stylesheet_link_tag, :mobilization)
